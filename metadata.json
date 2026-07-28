@@ -1,0 +1,6 @@
+{
+  "name": "Simulasi Sistem Respirasi SMA",
+  "description": "Aplikasi Simulasi Interaktif Sistem Pernapasan dan Pertukaran Gas untuk Pembelajaran Biologi SMA beserta LKPD Digital terintegrasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Custom Dark Slate Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }
+}
+
+/* Print CSS for LKPD Printable Document */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .printable-lkpd {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .printable-lkpd * {
+    color: black !important;
+    background: transparent !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  .printable-card {
+    border: 1px solid #94a3b8 !important;
+    page-break-inside: avoid;
+    margin-bottom: 12px !important;
+    padding: 12px !important;
+    border-radius: 6px !important;
+  }
+
+  /* Table styling in print */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+  
+  th, td {
+    border: 1px solid #64748b !important;
+    padding: 6px 8px !important;
+    text-align: left !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+  }
+}
+
+/* Pulsing and glow animations for biological elements */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
